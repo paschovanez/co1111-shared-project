@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+h1
+{
+    text-align: center;
+    font-family: "Brush Script MT", sans-serif, serif;
+    font-size: 10ex;
+}
+h2
+{
+    text-align: center;
+
+
+}
+#twitter
+{
+
+
+    float: right;
+
+}
+
+body
+{
+    background-color: #f8ffb7;
+}
+#StButton
+{
+    font-size: 5ex;
+    font-family: "Brush Script MT", sans-serif , serif;
+
+    border-radius: 3ex;
+    padding: 1ex 2ex;
+    box-shadow: 0 9px #999;
+}
+#StButton:hover
+{
+ background-color: #5b5b5b;
+}
+#SButton
+{
+    margin-top: 10ex;
+    text-align: center;
+}
+
+#addInfo
+{
+
+    border-style: solid;
+    float: right;
+    width: 100%;
+    padding: 10px;
+
+}
+
+
+
