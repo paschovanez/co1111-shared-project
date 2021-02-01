@@ -34,6 +34,10 @@ body
     padding: 1ex 2ex;
     box-shadow: 0 9px #999;
 }
+#gameList
+{
+    font-size: 4ex;
+}
 #StButton:hover
 {
  background-color: #5b5b5b;
