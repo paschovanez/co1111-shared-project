@@ -13,6 +13,18 @@ h2
 
 
 }
+h3
+{
+    text-align: center;
+    display: none;
+    font-size: 5ex;
+    font-family: "Brush Script MT", sans-serif, serif;
+}
+li
+{
+    border-style: double;
+    background-color: #fff7cf;
+}
 #twitter
 {
 
