@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -5,22 +6,25 @@ h1
 {
     text-align: center;
     font-family: "Brush Script MT", sans-serif, serif;
-    font-size: 10ex;
+    font-size: 7em;
+    margin: 0;
+    padding: 0;
+    text-shadow: 5px 5px 5px #818181; ;
 }
 h2
 {
     text-align: center;
-
-
+    font-size: 4em;
 }
+
 h3
 {
     text-align: center;
     display: none;
-    font-size: 5ex;
+    font-size: 3em;
     font-family: "Brush Script MT", sans-serif, serif;
 }
-li
+#gameList li
 {
     border-style: double;
     background-color: #fff7cf;
@@ -32,43 +36,113 @@ li
     float: right;
 
 }
+#LogoImg
+{
+    width: 20em;
+    display: block;
+    margin: 0 auto 0.5em;
 
+
+}
+header
+{
+    margin:0;
+    padding:0;
+    background-color: #ffd762;
+}
+footer
+{
+    font-size: 3em;
+    text-align: center;
+    font-family: 'Segoe UI', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #5b5b5b;
+}
 body
 {
     background-color: #f8ffb7;
+    margin: 0;
+    padding: 0;
 }
 #StButton
 {
-    font-size: 5ex;
+    font-size: 2em;
     font-family: "Brush Script MT", sans-serif , serif;
 
-    border-radius: 3ex;
-    padding: 1ex 2ex;
+    border-radius: 2em;
+    padding: 1em 2em;
     box-shadow: 0 9px #999;
 }
+#currentLoc
+{
+    background-color: #222222;
+}
+#menu
+{
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    overflow: hidden;
+    background-color: #fa802e;
+}
+#menu a
+{
+    text-decoration: none;
+    font-family: 'Segoe UI', serif;
+    display: inline-block;
+    padding: 0.5em;
+    font-size: 2.5em;
+    color: white;
+    border-right-style: solid;
+    border-width: 0.05em;
+    float: left;
+}
+#menu a:hover
+{
+    background-color: #e05603;
+}
+#menu #currentLoc:hover
+{
+    background-color: #222222;
+}
+#menu li
+{
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
 #gameList
 {
-    font-size: 4ex;
+    font-size: 3em;
 }
+
 #StButton:hover
 {
  background-color: #5b5b5b;
 }
 #SButton
 {
-    margin-top: 10ex;
+    margin-top: 3em;
     text-align: center;
 }
 
 #addInfo
 {
 
-    border-style: solid;
+    border: 0.1em solid black;
     float: right;
     width: 100%;
-    padding: 10px;
+
+    font-size: 3em;
 
 }
+
+
+
+
+
 
 
 

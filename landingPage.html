@@ -6,7 +6,20 @@
     <link rel="stylesheet" href="Style/style.css">
 </head>
 <body>
-<h1>Treasure Hunt Game</h1>
+<header>
+    <h1>Treasure Hunt Game</h1>
+    <img src="Img/TSA(logo).png" id="LogoImg">
+</header>
+
+<nav style="position: sticky; top: 0">
+    <ul id="menu">
+        <li><a id = "currentLoc"><img src="Img/HouseLogo.png" style="width: 1em"></a></li><!--current location is unclickable-->
+        <li class="active"><a href="#">ABOUT US</a></li>
+        <li class="active"><a href="#">CONTACT</a></li>
+        <li class="active"><a href="#" style="float: right;">NOTES</a></li>
+    </ul>
+</nav>
+
 <h2>Team: Telnov P., Schovanez P.A., Adamidis S.A.</h2>
 
 <div id="SButton">
@@ -15,14 +28,22 @@
     <ul id="gameList" style="list-style-type: none"></ul>
 </div>
 
-<h2 style="margin-top: 20ex">Additional information</h2>
+<h2 style="margin-top: 10em">Additional information</h2>
 <div id="addInfo">
 
         <div id="twitter">
-        <a class="twitter-timeline" data-lang="en"   data-width="300" data-height="700" data-theme="dark"  href="https://twitter.com/TsaHunt?ref_src=twsrc%5Etfw">Tweets by TsaHunt</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a class="twitter-timeline" data-lang="en"   data-width="500" data-height="700" data-theme="dark"  href="https://twitter.com/TsaHunt?ref_src=twsrc%5Etfw">Tweets by TsaHunt</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
-        Some additional information
+        <p>Game description</p>
+
 </div>
-        <script src="JavaScript/landingPageJS.js"></script>
+<br style="clear:both;"/>
+
+<footer>
+    <img src="Img/TSA(full).png" style="width: 6em">
+    <p>Info in footer</p> <!--should add info in footer(twitter link, github link, etc)-->
+</footer>
+
+<script src="JavaScript/landingPageJS.js"></script>
 </body>
 </html>
