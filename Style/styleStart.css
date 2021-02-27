@@ -1,0 +1,22 @@
+body
+{
+    background-color: #f8ffb7;
+    margin: 0;
+    padding: 0;
+}
+#question
+{
+    text-align: center;
+}
+#Answer
+{
+    font-size: 2em;
+
+    border-radius: 0.5em;
+
+}
+
+#AnswerField
+{
+    text-align: center;
+}

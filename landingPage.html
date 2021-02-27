@@ -23,9 +23,31 @@
 <h2>Team: Telnov P., Schovanez P.A., Adamidis S.A.</h2>
 
 <div id="SButton">
-    <h3  id="ChooseGame"> Choose your game:</h3>
-    <button onclick="getChallenges()" id="StButton">Start</button>
-    <ul id="gameList" style="list-style-type: none"></ul>
+
+
+    <button onclick="getName()" id="StButton">Start</button>
+
+    <div id="nameForm" class = "Shadow">
+        <form>
+        <label for="Fname" >Name:</label><br>
+        <input type="text" id="Fname" name="Fname" class="name" placeholder="Name" required><br><br>
+        <label for="Sname" >Surname:</label><br>
+        <input type="text" id="Sname" name="Sname" class="name" placeholder="Surname" required><br><br>
+
+        <h3  id="ChooseGame"> Choose your game:</h3>
+        <div id="GameChoice">
+
+        </div>
+        </form>
+        <h4>If game was not specified, first one will be choosed.</h4>
+        <h4 id="errorMessage"></h4>
+        <button onclick="startGame()" id="StartB">START</button>
+
+
+        <!--<ul  id="gameList" style="list-style-type: none"></ul>-->
+    </div>
+
+
 </div>
 
 <h2 style="margin-top: 10em">Additional information</h2>
@@ -38,6 +60,10 @@
 
 </div>
 <br style="clear:both;"/>
+
+<div id="ResumeDiv">
+    <button onclick="resume()" id="Resume">Resume</button>
+</div>
 
 <footer>
     <img src="Img/TSA(full).png" style="width: 6em">
