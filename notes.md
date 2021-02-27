@@ -8,6 +8,7 @@ We should upgrade our cookies, so they will support tracking of answered questio
 The main functionality(questions, score etc) is still under development.<br>
 Stamatious will take time to get used to code, that was written already<br>
 Pavel will continue working on the main functionality.</p>
+
 # Meeting 1 27.02.2021 21:00
 <p>Members: Pavel, Pascal<br>
   Pascal proposed a redesigning and restructuring code of the landing page, in the near days, he will get used to the code.<br>
