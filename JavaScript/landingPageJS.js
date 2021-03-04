@@ -45,14 +45,18 @@ function getName()
 
 function startGame()
 {
-
-    document.getElementById(0).checked = true;
+    if (document.getElementById(1).checked == false)
+    {
+        document.getElementById(0).checked = true;
+    }
     let fullName = Fname.value + Sname.value;
     const buttons = document.querySelectorAll('input[name="Game"]');
     console.log(fullName);
     let Value;
-    for (const button of buttons) {
-        if (button.checked) {
+    for (const button of buttons)
+    {
+        if (button.checked)
+        {
             Value = button.value;
             break;
         }

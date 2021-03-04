@@ -1,6 +1,6 @@
 const question = document.getElementById('question');
 const answer = document.getElementById('answer');
-const message = document.getElementById('message');
+const messageDir = document.getElementById('message');
 const scoreDir = document.getElementById('score');
 const skipDir = document.getElementById('skip');
 
@@ -26,14 +26,19 @@ function getQuestion()
         .then(response => response.json()) //Parse JSON text to JavaScript object
         .then(jsonObject => {
             console.log(session);
+
             question.innerHTML = jsonObject.questionText;
             if (jsonObject.canBeSkipped==true)
             {
-                skipDir.style.display='inline-block;';
+                skipDir.style.display='inline-block';
             }
             else if (jsonObject.canBeSkipped==false)
             {
                 skipDir.style.display='none';
+            }
+            if (jsonObject.completed==true)
+            {
+                window.location.href = 'leaderboard.html'
             }
             updateScore();
         });
@@ -44,7 +49,7 @@ getQuestion();
 function answerF()
 {
     let ansValue = answer.value;
-    let score = parseInt(getCookie('score'));
+    getLocation();
     fetch("https://codecyprus.org/th/api/answer?session="+session+ "&answer=" +ansValue)
         .then(response => response.json()) //Parse JSON text to JavaScript object
         .then(jsonObject =>
@@ -54,20 +59,22 @@ function answerF()
             {
                 if (jsonObject.correct==true)
                 {
+
                     updateScore();
-                    message.innerText="Correct";
+                    messageDir.innerText=jsonObject.message;
                     getQuestion();
+
                 }
                 else
                 {
                     updateScore();
-                    message.innerText="Incorrect";
+                    messageDir.innerText=jsonObject.message;
 
                 }
             }
             else
             {
-                message.innerText=jsonObject.errorMessages;
+                messageDir.innerText=jsonObject.errorMessages;
             }
 
         });
@@ -81,15 +88,17 @@ function setCookie(cookieName, cookieValue, expireDays) {
 }
 function updateScore()
 {
-    let score = 0;
+    let score;
     fetch("https://codecyprus.org/th/api/score?session="+session)
         .then(response => response.json()) //Parse JSON text to JavaScript object
         .then(jsonObject =>
         {
-            score = parseInt(jsonObject.score);
+            console.log(jsonObject);
+            score = jsonObject.score;
+            scoreDir.innerHTML="Score: " + score;
 
         });
-    scoreDir.innerHTML="Score: " + score;
+
 }
 
 function skip()
@@ -98,8 +107,9 @@ function skip()
         .then(response => response.json()) //Parse JSON text to JavaScript object
         .then(jsonObject =>
         {
+
             updateScore()
-            message.innerText=jsonObject.message;
+            messageDir.innerText=jsonObject.message;
             getQuestion();
         });
 }
@@ -108,7 +118,7 @@ function getLocation()
 {
     if (navigator.geolocation)
     {
-        //TODO - Geolocation is supported by browser.
+
         navigator.geolocation.getCurrentPosition(sendPos);
     }
     else
@@ -121,10 +131,11 @@ function getLocation()
 //SetInterval(getLocation, 35000);
 function sendPos(position) {
 
-    fetch("https://codecyprus.org/th/api/location?session=ag9nfmNvZGVjeXBydXNvcmdyFAsSB1Nlc3Npb24YgICAoMa0gQoM&latitude="+position.coords.latitude+  "&longitude=" + position.coords.longitude)
+    fetch("https://codecyprus.org/th/api/location?session=" + getCookie('session') +"&latitude="+position.coords.latitude+  "&longitude=" + position.coords.longitude)
         .then(response => response.json()) //Parse JSON text to JavaScript object
         .then(jsonObject =>
         {
+            console.log(jsonObject);
             console.log(jsonObject.status);
         });
 
