@@ -179,17 +179,8 @@ label
     padding: 0.5em;
 
 }
-form > ul > li
-{
-    padding: 0;
-    margin: 0;
-    alignment: center;
-}
-form>ul
-{
 
-    margin: 1em;
-}
+
 #gameChoice>input
 {
     height: 4em;

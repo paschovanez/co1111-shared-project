@@ -6,10 +6,17 @@
     <link rel="stylesheet" href="Style/styleStart.css">
 </head>
 <body>
-<h1 id="question"></h1>
+
 
 <div id="AnswerField">
-<input type="text" id="Answer"  placeholder="Answer" required><br><br>
+    <h1 id="question" ></h1>
+    <div id="message"></div>
+    <h1>Answer for the question:</h1>
+<input type="text" id="answer"  placeholder="Answer" required><br><br>
+    <p id="score"> </p>
+    <button onclick="answerF()" id="submitAns">Submit</button><br>
+    <button onclick="skip()" id="skip">Skip</button>
+
 </div>
 <script src="JavaScript/startJS.js">
 </script>

@@ -73,6 +73,7 @@ function startGame()
                 let session = jsonObject.session;
                 let numOfQuestions = jsonObject.numOfQuestions;
                 setCookie("session", session, 30);
+                setCookie("score", 0, 30);
                 setCookie("numberOfQuestions", numOfQuestions, 30);
                 window.location.href = 'start.html'
             }
