@@ -1,5 +1,5 @@
 const question = document.getElementById('question');
-const answer = document.getElementById('answer');
+var answer;
 const messageDir = document.getElementById('message');
 const scoreDir = document.getElementById('score');
 const skipDir = document.getElementById('skip');
@@ -20,23 +20,46 @@ function getCookie(cname) {
     return "";
 }
 const session = getCookie('session')
+
 function getQuestion()
 {
+    hideAll();
     fetch("https://codecyprus.org/th/api/question?session=" + session)
         .then(response => response.json()) //Parse JSON text to JavaScript object
         .then(jsonObject => {
             console.log(session);
+            if (jsonObject.questionType === "INTEGER" || jsonObject.questionType === "NUMERIC" )
+            {
+                document.getElementById("answerNum").style.display='inline-block';
+                answer = document.getElementById("answerNum");
+            }
+            else if (jsonObject.questionType === "BOOLEAN")
+            {
+                document.getElementById("bool").style.display='inline-block';
+                answer = document.getElementById("bool");
+            }
+            else if (jsonObject.questionType === "MCQ")
+            {
+                document.getElementById("multChoice").style.display='inline-block';
+                answer = document.getElementById("multChoice");
+            }
+            else if (jsonObject.questionType === "TEXT")
+            {
+                document.getElementById("answerText").style.display='inline-block';
+                answer = document.getElementById("answerText");
+            }
+
 
             question.innerHTML = jsonObject.questionText;
-            if (jsonObject.canBeSkipped==true)
+            if (jsonObject.canBeSkipped===true)
             {
                 skipDir.style.display='inline-block';
             }
-            else if (jsonObject.canBeSkipped==false)
+            else if (jsonObject.canBeSkipped===false)
             {
                 skipDir.style.display='none';
             }
-            if (jsonObject.completed==true)
+            if (jsonObject.completed===true)
             {
                 window.location.href = 'leaderboard.html'
             }
@@ -48,7 +71,34 @@ getQuestion();
 
 function answerF()
 {
-    let ansValue = answer.value;
+    console.log(answer);
+    let ansValue;
+    let buttons;
+    if (answer.id==="answerText" || answer.id==="answerNum")
+    {
+        ansValue = answer.value;
+    }
+    else
+    {
+        if (answer.id==="multChoice")
+        {
+            buttons = document.querySelectorAll('input[name="MCQ"]');
+        }
+        else if (answer.id==="bool")
+        {
+            buttons = document.querySelectorAll('input[name="bool"]');
+        }
+
+        for (const button of buttons)
+        {
+            if (button.checked)
+            {
+                ansValue = button.value;
+                break;
+            }
+        }
+
+    }
     getLocation();
     fetch("https://codecyprus.org/th/api/answer?session="+session+ "&answer=" +ansValue)
         .then(response => response.json()) //Parse JSON text to JavaScript object
@@ -140,5 +190,26 @@ function sendPos(position) {
         });
 
 }
+
+function hideAll()
+{
+    document.getElementById("answerNum").style.display='none';
+    document.getElementById("answerNum").value=0;
+
+    document.getElementById("answerText").style.display='none';
+    document.getElementById("answerText").value='';
+
+    document.getElementById("bool").style.display='none';
+    document.getElementById("multChoice").style.display='none';
+
+    let buttons;
+    buttons = document.querySelectorAll('input[type="radio"]');
+
+    for (const button of buttons)
+    {
+        button.checked=false;
+    }
+}
+
 
 

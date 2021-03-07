@@ -12,7 +12,34 @@
     <h1 id="question" ></h1>
     <div id="message"></div>
     <h1>Answer for the question:</h1>
-<input type="text" id="answer"  placeholder="Answer" required><br><br>
+    <input type="text" id="answerText"  placeholder="Answer" name="text" required><br><br>
+
+    <input type="number" id="answerNum"  placeholder="Answer" name="number" required><br><br>
+
+    <div id="bool">
+        <label for="true">True
+            <input type="radio" id="true" name="bool" value="true" required>
+        </label>
+        <label for="false">False
+            <input type="radio" id="false" name="bool" value="false">
+        </label>
+    </div>
+
+    <div id="multChoice">
+        <label for="A">A
+            <input type="radio" id="A" name="MCQ" value="A" required>
+        </label>
+        <label for="B">B
+            <input type="radio" id="B" name="MCQ" value="B">
+        </label>
+        <label for="C">C
+            <input type="radio" id="C" name="MCQ" value="C">
+        </label>
+        <label for="D">D
+            <input type="radio" id="D" name="MCQ" value="D">
+        </label>
+    </div>
+
     <p id="score"> </p>
     <button onclick="answerF()" id="submitAns">Submit</button><br>
     <button onclick="skip()" id="skip">Skip</button>
