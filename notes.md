@@ -23,3 +23,11 @@ Pavel will continue working on the main functionality.</p>
   QR code reader is missing, needs to be implemented.<br>
   There should be a different input fields for different questions.</p>
   
+ # Meeting 4 06.03.2021 
+ <p>Fixed the score, leaderboard was moved to the right place, although it is still possible to get to the leaderboard through a landing page.<br>
+  We should start thinking about how to implement a map of the previous questions.<br>
+  Our Twitter is still empty, we must do something with it.<br>
+  The style on the start page is needed to be enhanced.<br>
+  Pavel will implement different input fields by the end of the day</p>
+  
+  
