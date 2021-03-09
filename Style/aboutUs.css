@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    margin:0;
+    padding:0;
+    background-color: #ffd762;
+    display: block;
+
+}
+body
+{
+    background-color: #f8ffb7;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+    font-family: "Brush Script MT", sans-serif, serif;
+    font-size: 7em;
+    margin: 0;
+    padding: 0;
+    text-shadow: 5px 5px 5px #818181;
+}
+
+#currentLoc
+{
+    background-color: #222222;
+}
+#menu
+{
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    overflow: auto;
+    background-color: #fa802e;
+
+}
+
+#menu a
+{
+    text-decoration: none;
+    font-family: 'Segoe UI', serif;
+    display: inline-block;
+
+    padding: 0.5em;
+    font-size: 2.5em;
+    color: white;
+    border-right-style: solid;
+    border-width: 0.05em;
+    float: left;
+}
+#menu a:hover
+{
+    background-color: #e05603;
+}
+#menu #currentLoc:hover
+{
+    background-color: #222222;
+}
+#menu li
+{
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+nav
+{
+    padding: 0;
+    margin-top: -0.3em;;
+
+    box-shadow: 0.0em -0.0em 8px 0.5em rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ul {
+    padding-top: 0;
+    margin-top: 0;
+}
+#LogoImg
+{
+    padding-bottom: 1.5em;
+    width: 20em;
+    display: block;
+    margin: 0 auto 0.5em;
+}
+.Dev
+{
+    box-shadow: 0 0.5em 1em 0.5em #5b5b5b, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: solid 0.1vh black;
+    alignment: center;
+    padding: 3vh;
+    margin: 8vh 3vw;
+}
+
