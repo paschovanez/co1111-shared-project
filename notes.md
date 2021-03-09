@@ -30,4 +30,14 @@ Pavel will continue working on the main functionality.</p>
   The style on the start page is needed to be enhanced.<br>
   Pavel will implement different input fields by the end of the day</p>
   
+  # Meeting 5 09.03.2021
+  <p>Pavel implemented different input fields, added a tweet in our team twitter<br>
+    About Us page will be complited at the end of the day.<br>
+    For some reason application is not working on the iphone, it may be a problem with a cookies.<br>
+    Added our first unit test, which tests our cookies.<br>
+    There is also a problem with a leaderboard since it is not working properly on the mobile phones(nav menu)<br>
+    TODO:<br>
+    User acceptance plan, map of the questions, QR scanner, style of pages.</p>
+  
+  
   
