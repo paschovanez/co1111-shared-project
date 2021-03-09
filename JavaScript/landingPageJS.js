@@ -35,7 +35,7 @@ function getName()
 
             }
         });
-    document.getElementById("showGames").remove();
+
 
 
 
@@ -114,5 +114,15 @@ function getCookie(cname) {
     }
     return "";
 }
-
-
+/*
+function testCookies()
+{
+    let testValue = 'test';
+    setCookie('test', testValue, 1);
+    if (getCookie('test')==testValue)
+    {
+        console.log("Cookies are working");
+    }
+}
+testCookies();
+*/

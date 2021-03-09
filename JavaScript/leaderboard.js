@@ -23,9 +23,9 @@ function handleLeaderboard(leaderboard) {
         let date = new Date(entry['completionTime']);
         let formattedDate = date.toLocaleDateString("en-UK", options);
         html += "<tr>" +
-            "<td>" + entry['player'] + "</td>" +
-            "<td>" + entry['score'] + "</td>" +
-            "<td>" + formattedDate + "</td>" +
+            "<td>" + "<p>" + entry['player'] + "</p>" + "</td>" +
+            "<td>" + "<p>" + entry['score'] + "</p>" + "</td>" +
+            "<td>" + "<p>" + formattedDate + "</p>" + "</td>" +
             "</tr>";
     }
     let leaderboardElement = document.getElementById('resultsTable'); // table

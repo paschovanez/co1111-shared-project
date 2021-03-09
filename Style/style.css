@@ -38,7 +38,7 @@ h3
 {
 
 
-    float: right;
+    margin: 3vh 10vw;
 
 }
 #LogoImg
@@ -138,23 +138,15 @@ body
     text-align: center;
 }
 
-#addInfo
-{
 
-    border: 0.1em solid black;
-    float: right;
-    width: 100%;
-
-    font-size: 3em;
-
-}
 #nameForm
 {
     display: none;
-    border: 0.5em solid black;
-    margin: 10em;
+    border: solid 0.5vh black;
+    margin: 3vh 10vw;
     alignment: center;
-    border-radius: 4em;
+
+    border-radius: 0.5em;
     background-color: #ffc63f;
 }
 
@@ -168,8 +160,8 @@ label
 .name
 {
 
-    font-size: 4em;
-    width: 80%;
+    font-size: 3em;
+
     border-radius: 0.5em;
 }
 #submit
@@ -247,6 +239,25 @@ ul {
 {
     text-align: center;
 }
+#intro
+{
+    border: solid 0.5vh black;
+    margin: 3vh 10vw;
+    padding: 0vh 3vw;
+
+    border-radius: 0.5em;
+}
+#intro > h2
+{
+   margin-bottom: 2vh;
+}
+#intro > h3
+{
+    display: inline-block;
+    font-family: "Segoe UI";
+    margin-bottom: 2vh;
+}
+
 
 
 
