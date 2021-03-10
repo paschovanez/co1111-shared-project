@@ -96,7 +96,7 @@ function setCookie(cookieName, cookieValue, expireDays) {
     let date = new Date();
     date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 1000));
     let expires = "expires=" + date.toUTCString();
-    document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+    document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=start.html";
 }
 
 function getCookie(cname) {
