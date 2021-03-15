@@ -1,4 +1,4 @@
-### Testing plan 
+# Testing plan 
 
 ## Purpose: 
 
@@ -18,16 +18,16 @@ Tested software, which is free of major errors, and which is passed the specific
 Testing page, which will use a Testing API to insure that Treasure Hunt is working properly.   
 Unit tests, which would help testing an application, must be commented out prior to submission.   
 ## Tests:
-# Exploratory
+### Exploratory
 The main type of tests, which would be performed, due to the lack of resources and time.    
 Purpose: The main purpose of this type of test is to find major errors and remove them before another testing.    
 Testers: Testing team    
 Method: Exploratory testing does not require any documentation prior to testing, it is testing on the fly, in which testers come up with a test, which they execute immediately.     
-# Functional test.
+### Functional test.
 Purpose: Is to ensure that the output of the application is the same as the expected one, trough Unit tests    
 Testers: Testing team    
 Method: Creation and use of unit tests, which would use a Testing API to compare the expected output with an existing one.     
-# User acceptance Test
+### User acceptance Test
 Scope: Getting the list of games, Main game functionality(getting questions, sending answers), QR code scanner,  Geolocation, Leaderboard     
 Assumptions:     
 All test cases related to UAT must be documented on the testing page    
