@@ -36,4 +36,58 @@ Time frame: Test results should be provided by 23 March 2021.
 Resources:    
 Human resources(At the moment of creating the plan): 1 tester for 10 days.    
 Tested operating systems: Windows 10   
-Browser tests: Firefox, Chrome, Safari, Edge.   
+Browser tests: Firefox, Chrome, Safari, Edge. 
+
+#### UAT Risks
+1.	Not properly trained testers High Med    
+2.	Lack of testers High Med   
+#### UAT entry criteria
+All features must be implemented     
+All critical bugs must be fixed   
+Before UAT exploratory and functional testing should be done.    
+#### Test Cases:
+Getting a list of games:     
+1.	Visit: https://paschovanez.github.io/co1111-shared-project/index.html   
+2.	Click the start button   
+Expected result: Under “Choose your game:” Different treasure hunts, which can be selected, must appear.    
+
+Getting a question:   
+1.	Visit: https://paschovanez.github.io/co1111-shared-project/index.html     
+2.	Click the start button   
+3.	Enter your name, number of game and choose the treasure hunt, if the name is already taken try to use another name.   
+4.	Click the start button    
+Expected result: The first question of the game should appear with an input field related to this question.    
+
+Sending the correct answer:    
+1.	Visit: https://paschovanez.github.io/co1111-shared-project/index.html   
+2.	Click the start button    
+3.	Enter your name, number of game and choose the treasure hunt, if the name is already taken try to use another name.    
+4.	Click the start button.           
+5.	Enter the answer.                   
+Expected result: If the answer was correct, the message: ‘Well done!’ should be displayed and the score must change. The next question should be displayed.                                         
+Sending an incorrect answer:                     
+1.	Visit: https://paschovanez.github.io/co1111-shared-project/index.html           
+2.	Click the start button                   
+3.	Enter your name, number of game and choose the treasure hunt, if the name is already taken try to use another name.                
+4.	Click the start button.                
+5.	Enter the answer.             
+Expected result: If the answer was incorrect, message: ‘Wrong answer: [your answer]’ should be displayed and the score must be changed                     
+
+Geolocation:                       
+1.	Visit: https://paschovanez.github.io/co1111-shared-project/index.html                  
+2.	Click the start button                    
+3.	Enter your name, number of game and choose the treasure hunt, if a name is already taken try to use another name.                   
+4.	Click the start button.              
+5.	Answer the questions, until you get a location related one.               
+6.	Answer the question using an emulator of your location with the specified coordinates.          
+Expected result: 1.1 If coordinates and answer were correct. ‘Well done' message should be displayed. The next question should be displayed.         
+1.2 If the answer was incorrect: the message ‘Wrong answer: [your answer]’ should be displayed and the score must be changed              
+1.3 If answer is right and coordinates are incorrect message: ‘This is a location-sensitive question and your current location appears to be [distance] kilometers from the target which is further than the limit of [limit] meters.’ Should be displayed.             
+
+Leaderboard:          
+1.	Visit: https://paschovanez.github.io/co1111-shared-project/index.html   
+2.	Click the start button            
+3.	Enter your name, number of game and choose the treasure hunt, if name is already taken try to use another name.      
+4.	Click the start button.     
+5.	Answer the questions, until you’ve finished the game.                  
+Expected result: First 15 players should be displayed as a table.                
