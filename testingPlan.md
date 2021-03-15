@@ -64,7 +64,8 @@ Sending the correct answer:
 3.	Enter your name, number of game and choose the treasure hunt, if the name is already taken try to use another name.    
 4.	Click the start button.           
 5.	Enter the answer.                   
-Expected result: If the answer was correct, the message: ‘Well done!’ should be displayed and the score must change. The next question should be displayed.                                         
+Expected result: If the answer was correct, the message: ‘Well done!’ should be displayed and the score must change. The next question should be displayed.                         
+
 Sending an incorrect answer:                     
 1.	Visit: https://paschovanez.github.io/co1111-shared-project/index.html           
 2.	Click the start button                   
