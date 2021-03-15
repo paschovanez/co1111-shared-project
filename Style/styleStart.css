@@ -28,14 +28,14 @@ body
     text-align: center;
     border: 0.1em solid black;
     margin: 0 10vw ;
-    height: 100vh;
+    height: 150vh;
     box-shadow: 0.0em -0.0em 8px 0.5em rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #submitAns
 {
     font-size: 2em;
     padding: 0.5em;
-    border-radius: 2em;
+    border-radius: 0.5em;
     margin-bottom: 2vh;
     margin-right: 0;
 
@@ -48,9 +48,34 @@ body
 {
     font-size: 2em;
     padding: 0.5em;
-    border-radius: 2em;
+    border-radius: 0.5em;
     margin-top: 2vh;
     margin-bottom: 2vh;
     display: inline-block;
 
 }
+.cameraButton
+{
+    font-size: 3vh;
+    border-radius: 0.5vh;
+}
+.c1
+{
+    font-size: 2vh;
+}
+#score
+{
+    font-size: 2vh;
+}
+label
+{
+    font-size: 3vh;
+}
+input[type=radio] {
+    width: 2vh;
+    height: 2vh;
+
+
+}
+
+

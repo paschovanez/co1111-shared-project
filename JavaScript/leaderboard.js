@@ -9,8 +9,8 @@ function getLeaderBoard(url) {
         .then(json => handleLeaderboard(json));
 }
 // for now, hardcoded
-let treasureHuntId= "ag9nfmNvZGVjeXBydXNvcmdyGQsSDFRyZWFzdXJlSHVudBiAgICAvKGCCgw"
-let url = TH_API_URL + "leaderboard?sorted&treasure-hunt-id=" + treasureHuntId; // form url
+let treasureHuntId= getCookie('session');
+let url = "https://codecyprus.org/th/api/leaderboard?sorted&session=" + treasureHuntId + "&limit=20"; // form url
 getLeaderBoard(url);
 
 function handleLeaderboard(leaderboard) {
@@ -30,4 +30,20 @@ function handleLeaderboard(leaderboard) {
     }
     let leaderboardElement = document.getElementById('resultsTable'); // table
     leaderboardElement.innerHTML += html;// append generated HTML to existing
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
