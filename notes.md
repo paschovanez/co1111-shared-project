@@ -38,6 +38,14 @@ Pavel will continue working on the main functionality.</p>
     There is also a problem with a leaderboard since it is not working properly on the mobile phones(nav menu)<br>
     TODO:<br>
     User acceptance plan, map of the questions, QR scanner, style of pages.</p>
-  
+    
+  # Meeting 6 15.03.2021
+  Uploaded a test plan, which includes user acceptance plan.   
+  Also QR code scanner was implemented, but it lacks some style and also were might be a problem with loading time of the camera.
+  Fixed some issues with responsiveness on the start page.
+  TODO:   
+  Map of the questions.   
+  Testing.   
+  Info in the footer of index.html   
   
   
