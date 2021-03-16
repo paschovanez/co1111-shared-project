@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test page</title>
+    <link rel="stylesheet" href="Style/testCss.css">
+</head>
+<body>
+<h1>Testing plan</h1>
+
+<h2>Purpose:</h2>
+
+<p>The main purpose of this plan is to introduce a testing strategy, which will be used to test the web application.<br>
+In addition, the testing plan introduces the ways of how testing results should be recorded.</p>
+<h2>Project Overview:</h2>
+<p>Web application Treasure Hunt is an online quiz, in which players can answer specific questions, that depend on their location at the moment of playing the game.<br>
+    Functionality includes geolocation, QR code scanner, use of API and use of cookies.</p>
+<h2>Testers:</h2>
+<p>Testers will perform tasks specified in this testing plan and will record the results of the testing on this page.<br>
+For now, the testing team consists of: Pavel Telnov.<br>
+    The testing team may change over time, if it did so, the Testers section must be updated.</p>
+<h2>Test objectives</h2>
+<p>The objective of the testing of the Web Application is to ensure that the functionality of Treasure Hunt is working according to the given specifications.<br>
+The final result of the testing should include:<br>
+Tested software, which is free of major errors, and which is passed the specifications.<br>
+Testing page, which will use a Testing API to insure that Treasure Hunt is working properly.<br>
+    Unit tests, which would help testing an application, must be commented out prior to submission.</p>
+<h2>Tests:</h2>
+<h3>Exploratory</h3>
+<p>The main type of tests, which would be performed, due to the lack of resources and time.<br>
+Purpose: The main purpose of this type of test is to find major errors and remove them before another testing.<br>
+Testers: Testing team<br>
+    Method: Exploratory testing does not require any documentation prior to testing, it is testing on the fly, in which testers come up with a test, which they execute immediately.</p>
+<h3>Functional test.</h3>
+<p>Purpose: Is to ensure that the output of the application is the same as the expected one, trough Unit tests<br>
+Testers: Testing team<br>
+    Method: Creation and use of unit tests, which would use a Testing API to compare the expected output with an existing one.</p>
+<h3>User acceptance Test</h3>
+<p>Scope: Getting the list of games, Main game functionality(getting questions, sending answers), QR code scanner,  Geolocation, Leaderboard<br>
+Assumptions:<br>
+All test cases related to UAT must be documented on the testing page<br>
+Testers: Pavel Telnov<br>
+Time frame: Test results should be provided by 23 March 2021.<br>
+Resources:<br>
+Human resources(At the moment of creating the plan): 1 tester for 10 days.<br>
+Tested operating systems: Windows 10<br>
+    Browser tests: Firefox, Chrome, Safari, Edge.</p>
+
+<h4>UAT Risks</h4>
+<p>1.Not properly trained testers High Probability Medium Impact<br>
+    2.Lack of testers High Probability Medium Impact</p>
+<h4>UAT entry criteria</h4>
+<p>All features must be implemented<br>
+All critical bugs must be fixed<br>
+Before UAT exploratory and functional testing should be done.</p>
+<h4>Test Cases:</h4>
+<table>
+    <tr>
+        <td>Getting a list of games:</td>
+        <td>
+            <ol>
+                <li>Visit: https://paschovanez.github.io/co1111-shared-project/index.html</li>
+                <li>Click the start button</li>
+                <li>Expected result: Under “Choose your game:” Different treasure hunts, which can be selected, must appear.</li>
+            </ol>
+        </td>
+    </tr>
+<tr>
+    <td>Getting a question:</td>
+    <td>
+        <ol>
+            <li>Visit: https://paschovanez.github.io/co1111-shared-project/index.html</li>
+            <li>Click the start button</li>
+            <li>Enter your name, number of game and choose the treasure hunt, if the name is already taken try to use another name.</li>
+            <li>Click the start button</li>
+            <li>Expected result: The first question of the game should appear with an input field related to this question.</li>
+        </ol>
+    </td>
+</tr>
+    <tr><td>Sending the correct answer:</td>
+        <td>
+            <ol>
+                <li>Visit: https://paschovanez.github.io/co1111-shared-project/index.html</li>
+                <li>Click the start button</li>
+                <li>Enter your name, number of game and choose the treasure hunt, if the name is already taken try to use another name.</li>
+                <li>Click the start button.</li>
+                <li>Enter the answer.</li>
+                <li>Expected result: If the answer was correct, the message: ‘Well done!’ should be displayed and the score must change.
+                    The next question should be displayed.</li>
+            </ol>
+        </td>
+    </tr>
+
+    <tr><td>Sending an incorrect answer:</td>
+        <td>
+            <ol>
+                <li>Visit: https://paschovanez.github.io/co1111-shared-project/index.html</li>
+                <li>Click the start button</li>
+                <li>Enter your name, number of game and choose the treasure hunt, if the name is already taken try to use another name.</li>
+                <li>Click the start button.</li>
+                <li>Enter the answer.</li>
+                <li>Expected result: If the answer was incorrect, message: ‘Wrong answer: [your answer]’ should be displayed and the score must be changed</li>
+            </ol>
+        </td>
+    </tr>
+
+    <tr><td>Geolocation:</td>
+        <td>
+            <ol>
+                <li>Visit: https://paschovanez.github.io/co1111-shared-project/index.html</li>
+                <li>Click the start button</li>
+                <li>Enter your name, number of game and choose the treasure hunt, if a name is already taken try to use another name.</li>
+                <li>Click the start button.</li>
+                <li>Answer the questions, until you get a location related one.</li>
+                <li>Answer the question using an emulator of your location with the specified coordinates.</li>
+                <li>Expected result:<br>
+                    7.1 If coordinates and answer were correct. ‘Well done' message should be displayed. The next question should be displayed.<br>
+                    7.2 If the answer was incorrect: the message ‘Wrong answer: [your answer]’ should be displayed and the score must be changed<br>
+                    7.3 If answer is right and coordinates are incorrect message: ‘This is a location-sensitive question and your current location appears to be [distance] kilometers<br>
+                        from the target which is further than the limit of [limit] meters.’ should be displayed.</li>
+            </ol>
+        </td>
+    </tr>
+
+    <tr><td>Leaderboard:</td>
+        <td>
+            <ol>
+                <li>Visit: https://paschovanez.github.io/co1111-shared-project/index.html</li>
+                <li>Click the start button</li>
+                <li>Enter your name, number of game and choose the treasure hunt, if name is already taken try to use another name.</li>
+                <li>Click the start button.</li>
+                <li>Answer the questions, until you’ve finished the game.</li>
+                <li>Expected result: First 15 players should be displayed as a table.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
