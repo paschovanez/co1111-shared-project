@@ -64,6 +64,7 @@ function getQuestion()
             {
                 window.location.href = 'leaderboard.html'
             }
+            document.getElementById('questionNum').innerHTML="Question: " + (parseInt(jsonObject.currentQuestionIndex) + 1) +"/" + jsonObject.numOfQuestions;
             updateScore();
         });
 }
@@ -259,6 +260,7 @@ function OpenCamera()
         }
     }).catch(function (e) {
         console.error(e);
+        alert("No cameras found.");
     });
 }
 
