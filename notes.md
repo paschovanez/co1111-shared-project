@@ -46,6 +46,15 @@ Pavel will continue working on the main functionality.</p>
   TODO:   
   Map of the questions.   
   Testing.   
-  Info in the footer of index.html   
+  Info in the footer of index.html  
+  
+  # Meeting 7 21.03.2021
+  Added a button to switch to the next camera.    
+  Added a label which shows the current question, and the overall number of questions in this game.   
+  Added a background image.   
+  TODO:   
+  Heuristic evaluation.      
+  Info button in the game page.   
+  Unit testing.   
   
   
