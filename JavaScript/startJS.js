@@ -3,6 +3,8 @@ var answer;
 const messageDir = document.getElementById('message');
 const scoreDir = document.getElementById('score');
 const skipDir = document.getElementById('skip');
+const skipWindow = document.getElementById('skipConf');
+const infoWindow = document.getElementById('Info');
 var cameraNumber=0;
 
 function getCookie(cname) {
@@ -66,6 +68,9 @@ function getQuestion()
             }
             document.getElementById('questionNum').innerHTML="Question: " + (parseInt(jsonObject.currentQuestionIndex) + 1) +"/" + jsonObject.numOfQuestions;
             updateScore();
+            document.getElementById('corrPoints').innerText=jsonObject.correctScore;
+            document.getElementById('incorrPoints').innerText=jsonObject.wrongScore;
+            document.getElementById('skipPoints').innerText=jsonObject.skipScore;
         });
 }
 
@@ -152,9 +157,27 @@ function updateScore()
         });
 
 }
+function openInfo()
+{
+    infoWindow.style.display='block';
+}
+function closeInfo()
+{
+    infoWindow.style.display='none';
+}
 
 function skip()
 {
+    skipWindow.style.display='block';
+}
+function  closeSkip()
+{
+    skipWindow.style.display='none';
+}
+
+function skipS()
+{
+    closeSkip();
     fetch("https://codecyprus.org/th/api/skip?session="+session)
         .then(response => response.json()) //Parse JSON text to JavaScript object
         .then(jsonObject =>

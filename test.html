@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="Style/testCss.css">
 </head>
 <body>
+<a href="#UATcases">Go to UAT cases</a><br>
+<a href="#">Go to UAT results</a><br>
+<a href="#">Go to Unit tests</a><br>
+<a id="testingPlan"></a>
 <h1>Testing plan</h1>
 
 <h2>Purpose:</h2>
@@ -53,6 +57,7 @@ Tested operating systems: Windows 10<br>
 <p>All features must be implemented<br>
 All critical bugs must be fixed<br>
 Before UAT exploratory and functional testing should be done.</p>
+<a id="UATcases"></a>
 <h4>Test Cases:</h4>
 <table>
     <tr>
@@ -133,6 +138,27 @@ Before UAT exploratory and functional testing should be done.</p>
                 <li>Expected result: First 15 players should be displayed as a table.</li>
             </ol>
         </td>
+    </tr>
+</table>
+<h2>Exploratory testing</h2>
+<table>
+    <tr>
+        <th>Problem</th>
+        <th>Tester</th>
+        <th>Fixed</th>
+        <th>Comment</th>
+    </tr>
+    <tr>
+        <td>Leaderboard width is much wider, then it should be on mobile phones</td>
+        <td>Pavel Telnov</td>
+        <td>Fixed</td>
+        <td>Because some users used wide names, names were stretching the table out of bounds. Fixed by limiting the number of players displayed on the leaderboard.</td>
+    </tr>
+    <tr>
+        <td>Embedded twitter is not fully responsive for wide screens</td>
+        <td>Pavel Telnov</td>
+        <td>Fixed</td>
+        <td>Twitter wasn't responsive for the full screen on PC, at some moment it stopped stretching. Fixed by adding the css property for viewport wider than 1600px</td>
     </tr>
 </table>
 </body>

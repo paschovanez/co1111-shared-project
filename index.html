@@ -20,13 +20,14 @@
 </nav>
 <div class="Shadow" id="intro">
     <h2>About the game:</h2>
-    <h3>Treasure Hunt is an online quiz where the answers depend on you finding information at specific locations. To start the game you need to input your name and the number of game you're willing to start.</h3>
+    <h3>Treasure Hunt is an online quiz where the answers depend on you finding information at specific locations. To start the game you need to click 'Start' button, input your name and the number of game you're willing to start, and when press the start button again.</h3>
 </div>
 
 <div id="SButton">
 
 
-    <button onclick="getName()" id="StButton">Start</button>
+    <button onclick="getName()" id="StButton" class="button">Start new game</button>
+
 
     <div id="nameForm" class = "Shadow">
         <form>
@@ -42,13 +43,16 @@
         </form>
         <h4>If game was not specified, first one will be choosed.</h4>
         <h4 id="errorMessage"></h4>
-        <button onclick="startGame()" id="StartB">START</button>
+        <button onclick="startGame()" id="StartB" class="button">START</button>
 
 
         <!--<ul  id="gameList" style="list-style-type: none"></ul>-->
     </div>
 
 
+</div>
+<div id="ResumeDiv">
+    <button onclick="resume()" id="Resume" class="button">Resume previous game</button>
 </div>
 
 
@@ -61,13 +65,13 @@
 
 <br style="clear:both;"/>
 
-<div id="ResumeDiv">
-    <button onclick="resume()" id="Resume">Resume</button>
-</div>
 
-<footer>
-    <img src="Img/TSA(full).png" style="width: 6em">
-    <p>Info in footer</p> <!--should add info in footer(twitter link, github link, etc)-->
+
+<footer class="Shadow">
+    <img src="Img/TSA(full).png" style="width: 6em"><br>
+    <a href="https://twitter.com/TsaHunt"><img src="Img/twitter.png" width="100vw"></a>
+    <a href="https://www.instagram.com/treasurehunttsa/"><img src="Img/instagram.png" width="100vw"></a><br>
+    <a href="https://twitter.com/TsaHunt" style="color: #f8ffb7">Sources</a>
 </footer>
 
 <script src="JavaScript/landingPageJS.js"></script>

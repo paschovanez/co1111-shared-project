@@ -11,7 +11,11 @@
 
 <div id="AnswerField">
     <h1 id="question" ></h1>
-    <div id="questionNum"></div><br>
+    <div id="StatsWrap">
+        <div id="questionNum" class="stats"></div>
+        <div id="score" class="stats"> </div>
+        <button onclick="openInfo()" class="cameraButton">Info</button><br>
+    </div>
     <div id="message"></div>
 
     <h1>Answer for the question:</h1>
@@ -42,16 +46,36 @@
         <label for="D">
             <input type="radio" id="D" name="MCQ" value="D" class="c1">D
         </label>
-    </div>
+    </div><br>
 
-    <p id="score"> </p>
-    <button onclick="answerF()" id="submitAns">Submit</button>
-    <button onclick="skip()" id="skip">Skip</button><br>
+
+    <button onclick="answerF()" id="submitAns" class="cameraButton">Submit</button>
+    <button onclick="skip()" id="skip" class="cameraButton">Skip</button><br>
     <button onclick="OpenCamera()" class="cameraButton">Camera</button>
     <button onclick="StopCamera()" class="cameraButton" style="margin-bottom: 4vh">Close Camera</button><br>
     <button onclick="NextCamera()" class="cameraButton">Next</button><br>
 
     <video id="preview" style="width: 60% "></video>
+
+    <div id="skipConf" class="popup">
+        <!-- Modal content -->
+        <div class="popupContent">
+
+            <p>Are you sure you want to skip the question?</p><br>
+            <button onclick="closeSkip()" class="cameraButton" style="display: inline-block">NO</button>
+            <button onclick="skipS()" class="cameraButton" style="display: inline-block">YES</button>
+        </div>
+    </div>
+    <div id="Info" class="popup">
+        <div class="popupContent">
+            <p>To get to the new question you need to input the correct answer and click "Submit" button, or you can skip the question</p>
+            <p>If you answer correctly you will get: <span id="corrPoints" style="color: green"></span> points</p>
+            <p>If you answer incorrectly you will get: <span id="incorrPoints" style="color: red"></span> points</p>
+            <p>If you skip the question you will get: <span id="skipPoints" style="color: blue"></span> points</p>
+
+            <button onclick="closeInfo()" class="cameraButton">Close</button>
+        </div>
+    </div>
 
 </div>
 <script src="JavaScript/startJS.js">

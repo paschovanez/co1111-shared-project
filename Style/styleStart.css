@@ -1,9 +1,25 @@
+@font-face {
+    font-family: 'Merriweather';
+    src: url('fonts/merriweather-webfont.woff2') format('woff2'),
+    url('fonts/merriweather-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+
+}
+
 body
 {
-    background-color: #f8ffb7;
     margin: 0;
     padding: 0;
+    background-image: url("../Img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family:  'Merriweather', sans-serif ;
 }
+
 #question
 {
     text-align: center;
@@ -26,6 +42,7 @@ body
 #AnswerField
 {
     text-align: center;
+    background-color: #f8ffb7;
     border: 0.1em solid black;
     margin: 0 10vw ;
     height: 150vh;
@@ -33,12 +50,9 @@ body
 }
 #submitAns
 {
-    font-size: 2em;
-    padding: 0.5em;
-    border-radius: 0.5em;
+
     margin-bottom: 2vh;
     margin-right: 0;
-
 }
 #message
 {
@@ -46,9 +60,9 @@ body
 }
 #skip
 {
-    font-size: 2em;
-    padding: 0.5em;
-    border-radius: 0.5em;
+
+
+
     margin-top: 2vh;
     margin-bottom: 2vh;
     display: inline-block;
@@ -57,15 +71,25 @@ body
 .cameraButton
 {
     font-size: 3vh;
-    border-radius: 0.5vh;
+    border-radius: 1vh;
+    background-color: #fc9e47;
+    border: 0.5vh solid #ff7636;
+    margin: 0.5vh;
+    padding: 1vh;
+    font-family:  'Merriweather', sans-serif ;
 }
 .c1
 {
     font-size: 2vh;
 }
-#score
+.stats
 {
-    font-size: 2vh;
+    font-size: 3vh;
+    display: inline-block;
+    background-color: #fc9e47;
+    padding: 1vh;
+    border: 0.5vh solid #ff7636;
+    border-radius: 1vh;
 }
 label
 {
@@ -77,9 +101,43 @@ input[type=radio] {
 
 
 }
-#questionNum
+#StatsWrap
 {
-    font-size: 3vh;
+    margin-top: 0.5vh;
 }
+
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.popupContent {
+    background-color: #f8ffb7;
+    margin: 5vw auto; /* 15% from the top and centered */
+    padding: 4vw;
+    font-size: 2vh;
+    border: 0.2vw solid #565656;
+    width: 60%; /* Could be more or less, depending on screen size */
+}
+#message
+{
+    font-size: 2vh;
+    color: #ff0000;
+}
+
+
+
+
+
+
 
 
