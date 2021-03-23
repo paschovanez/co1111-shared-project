@@ -9,6 +9,7 @@
 <a href="#UATcases">Go to UAT cases</a><br>
 <a href="#UATresults">Go to UAT results</a><br>
 <a href="#UnitTest">Go to Unit tests</a><br>
+<a href="#heuristics">Go to Heuristics</a><br>
 <a href="index.html">Home</a><br>
 <a id="testingPlan"></a>
 <h1>Testing plan</h1>
@@ -283,6 +284,110 @@ Before UAT exploratory and functional testing should be done.</p>
         <td>Pavel Telnov</td>
         <td>Not fixed</td>
         <td>Just refreshes the current camera does not go to the next one</td>
+    </tr>
+</table>
+<h2>Heuristics</h2>
+<a id="heuristics"></a>
+<table>
+    <tr>
+        <td>1 Visibility of system status </td>
+        <td>
+            <ol>
+                <li>Navigation menu at the landing page shows the current location of the user, by colouring the current location in the navigation menu in black</li>
+                <li>In the game, interface shows current question of the player, just under the question.</li>
+                <li>Leaderboard displays the “Loading” message, while it’s trying to get results from the API</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td>2 Match between system and the real world</td>
+        <td>
+            <ol>
+                <li>The page only uses common language, so there is no need in seeking definitions for words</li>
+                <li>The user will find an information on how to start the game, right after he enters the website.</li>
+                <li>Info window in the quiz will display adjustments to the score with an appropriate color</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td>3 User control and freedom</td>
+        <td>
+            <ol>
+                <li>The navigation menu gives you an opportunity to clearly navigate through the application</li>
+                <li>If you pushed skip button, you will have an opportunity either to skip the game or to return</li>
+                <li>You always can leave a quiz by pushing ‘Home’ button</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td>4 Consistency and standards</td>
+        <td>
+            <ol>
+                <li>The web application’s landing page have a consistent layout which consists of header footer and the main body part</li>
+                <li>All Buttons in the quiz are following same style</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td>5 Error prevention</td>
+        <td>
+            <ol>
+                <li>The application have different input fields for different type of answers</li>
+                <li>On pressing the skip button, application will ask you, if you’re sure</li>
+                <li>The application will not proceed to start the quiz if a user does not specify the game</li>
+                <li>All buttons are responsive, so user will not have any problems with hitting the correct button</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td>6 Recognition rather than recall</td>
+        <td>
+            <ol>
+                <li>Only needed information is displayed to the user, the current question is always displayed to the user</li>
+                <li>At the leaderboard page you can see you answers, which you gave through the game</li>
+
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td>7 Flexibility and efficiency of use</td>
+        <td>
+            <ol>
+                <li>Application has a resume button which gives an opportunity, to continue the previous game</li>
+                <li>In the testing page you have a links to a specific point of the page, in some situations that will save some time</li>
+
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td>8 Aesthetic and minimalist design</td>
+        <td>
+            <ol>
+                <li>Colors of the application is consistent, and there is only 3 of them</li>
+                <li>Web application provides simple navigation with a navigation menu</li>
+                <li>There is a plenty of empty space in the application</li>
+
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td>9 Help users recognize, diagnose, and recover from errors</td>
+        <td>
+            <ol>
+                <li>On the landing page, if your input is incorrect, the application will specify, why it is not suitable.(name already used, game is unavailable)</li>
+                <li>Location depended question will specify, why your answer was wrong (if your location was incorrect or your answer.)</li>
+
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td>10 Help and documentation</td>
+        <td>
+            <ol>
+                <li>There is a guide on the landing game, which contain information on how to start the game</li>
+                <li>There is an info button at quiz, which will help user to understand the functionality of the application</li>
+            </ol>
+        </td>
     </tr>
 </table>
 <h2>Unit Testing</h2>
