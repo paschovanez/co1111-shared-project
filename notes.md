@@ -57,4 +57,9 @@ Pavel will continue working on the main functionality.</p>
   Info button in the game page.   
   Unit testing.   
   
-  
+  # Meeting 8 23.03.2021
+  Added an info button   
+  Added a first unit test   
+  Heuristic evaluation soon will be uploaded  
+  Changed style of the leaderboard table   
+  Overall style improvements    
