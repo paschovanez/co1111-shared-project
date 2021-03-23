@@ -282,7 +282,7 @@ function OpenCamera()
             console.error('No cameras found.');
             alert("No cameras found.");
         }
-        alert(cameras.length);
+        messageDir.innerHTML=cameras.length;
     }).catch(function (e) {
         console.error(e);
         alert("No cameras found.");
