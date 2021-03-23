@@ -5,7 +5,6 @@ const scoreDir = document.getElementById('score');
 const skipDir = document.getElementById('skip');
 const skipWindow = document.getElementById('skipConf');
 const infoWindow = document.getElementById('Info');
-const questionNum= document.getElementById('questionNum');
 var cameraNumber=0;
 
 function getCookie(cname) {   // code from the https://www.w3schools.com
@@ -28,10 +27,10 @@ const session = getCookie('session')
 function getQuestion()
 {
     hideAll();
-    fetch("https://codecyprus.org/th/api/question?session=" + session)
+    fetch("https://codecyprus.org/th/test-api/question?" + getCookie('p1') + getCookie('p2') + getCookie('p3'))
         .then(response => response.json()) //Parse JSON text to JavaScript object
         .then(jsonObject => {
-            console.log(jsonObject);
+            console.log(session);
             if (jsonObject.questionType === "INTEGER" || jsonObject.questionType === "NUMERIC" )
             {
                 document.getElementById("answerNum").style.display='inline-block';
@@ -67,7 +66,7 @@ function getQuestion()
             {
                 window.location.href = 'leaderboard.html'
             }
-            questionNum.innerHTML="Question: " + (parseInt(jsonObject.currentQuestionIndex) + 1) +"/" + jsonObject.numOfQuestions;
+            document.getElementById('questionNum').innerHTML="Question: " + (parseInt(jsonObject.currentQuestionIndex) + 1) +"/" + jsonObject.numOfQuestions;
             updateScore();
             document.getElementById('corrPoints').innerText=jsonObject.correctScore;
             document.getElementById('incorrPoints').innerText=jsonObject.wrongScore;
@@ -121,7 +120,7 @@ function answerF()
             {
                 if (jsonObject.correct==true)
                 {
-                    setCookie('Map', getCookie('Map') + '<tr><td>' + questionNum.innerText + '</td><td>' + ansValue +'</td></tr>',1 );
+
                     updateScore();
                     messageDir.innerText=jsonObject.message;
                     getQuestion();
@@ -142,12 +141,6 @@ function answerF()
         });
 }
 
-function setCookie(cookieName, cookieValue, expireDays) { // code from the https://www.w3schools.com
-    let date = new Date();
-    date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 1000));
-    let expires = "expires=" + date.toUTCString();
-    document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=start.html";
-}
 function updateScore()
 {
     let score;
@@ -180,48 +173,6 @@ function  closeSkip()
     skipWindow.style.display='none';
 }
 
-function skipS()
-{
-    closeSkip();
-    setCookie('Map', getCookie('Map') + '<tr><td>' + questionNum.innerHTML + '</td><td><p>Skipped</p></p></td></tr>',1 );
-    fetch("https://codecyprus.org/th/api/skip?session="+session)
-        .then(response => response.json()) //Parse JSON text to JavaScript object
-        .then(jsonObject =>
-        {
-            updateScore()
-            messageDir.innerText=jsonObject.message;
-            getQuestion();
-        });
-}
-
-function getLocation()
-{
-    if (navigator.geolocation)
-    {
-
-        navigator.geolocation.getCurrentPosition(sendPos);
-    }
-    else
-        {
-        alert("Geolocation is not supported by your browser.");
-    }
-}
-
-
-let interval = setInterval(getLocation, 120000);
-
-function sendPos(position) {
-
-    fetch("https://codecyprus.org/th/api/location?session=" + getCookie('session') +"&latitude="+position.coords.latitude+  "&longitude=" + position.coords.longitude)
-        .then(response => response.json()) //Parse JSON text to JavaScript object
-        .then(jsonObject =>
-        {
-            console.log(jsonObject);
-            console.log(jsonObject.status);
-        });
-
-}
-
 function hideAll()
 {
     document.getElementById("answerNum").style.display='none';
@@ -233,6 +184,7 @@ function hideAll()
     document.getElementById("bool").style.display='none';
     document.getElementById("multChoice").style.display='none';
     document.getElementById('locationReq').style.display='none';
+
     let buttons;
     buttons = document.querySelectorAll('input[type="radio"]');
 
@@ -295,7 +247,7 @@ function OpenCamera()
 }
 function goHome()
 {
-    window.location.href="index.html";
+    window.location.href="test.html";
 }
 
 function NextCamera()
@@ -308,7 +260,7 @@ function NextCamera()
         }
         else
         {
-           cameraNumber=0;
+            cameraNumber=0;
         }
 
     }).then(OpenCamera());
@@ -328,7 +280,3 @@ scanner.addListener('scan', function (content) {
     console.log(content);
     document.getElementById("content").innerHTML = "Hint: " + content;
 })
-
-
-
-

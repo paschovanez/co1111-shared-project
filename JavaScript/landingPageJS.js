@@ -34,6 +34,7 @@ function getName()
 
 
             }
+            document.getElementById(0).checked = true;
         });
 
 
@@ -45,10 +46,6 @@ function getName()
 
 function startGame()
 {
-    if (document.getElementById(1).checked == false)
-    {
-        document.getElementById(0).checked = true;
-    }
     let fullName = Fname.value + Sname.value;
     const buttons = document.querySelectorAll('input[name="Game"]');
     console.log(fullName);
@@ -79,12 +76,23 @@ function startGame()
                 setCookie("session", session, 30);
                 setCookie("score", 0, 30);
                 setCookie("numberOfQuestions", numOfQuestions, 30);
+                setCookie('Map',"", 1);
                 window.location.href = 'start.html'
             }
             });
 
 
 }
+
+function hideResume()
+{
+    if (getCookie('session') == "")
+    {
+        document.getElementById('Resume').style.display='none';
+    }
+
+}
+hideResume();
 
 function resume()
 {

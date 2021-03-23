@@ -10,7 +10,7 @@ function getLeaderBoard(url) {
 }
 // for now, hardcoded
 let treasureHuntId= getCookie('session');
-let url = "https://codecyprus.org/th/api/leaderboard?sorted&session=" + treasureHuntId + "&limit=20"; // form url
+let url = "https://codecyprus.org/th/api/leaderboard?sorted&session=" + treasureHuntId + "&limit=10"; // form url
 getLeaderBoard(url);
 
 function handleLeaderboard(leaderboard) {
@@ -37,6 +37,12 @@ function refreshTable()
 {
     window.location.reload();
 }
+
+function questMap()
+{
+    document.getElementById('questMap').innerHTML += getCookie('Map');
+}
+questMap();
 
 function getCookie(cname) {
     let name = cname + "=";

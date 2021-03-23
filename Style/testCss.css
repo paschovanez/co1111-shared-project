@@ -8,7 +8,13 @@ table
     border: 0.1vh solid black;
     border-collapse: collapse;
     margin: 2vh;
+    width: 70%;
 
+}
+select
+{
+    font-size: 2vh;
+    margin: 1vh;
 }
 td
 {

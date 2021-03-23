@@ -7,8 +7,9 @@
 </head>
 <body>
 <a href="#UATcases">Go to UAT cases</a><br>
-<a href="#">Go to UAT results</a><br>
+<a href="#UATresults">Go to UAT results</a><br>
 <a href="#UnitTest">Go to Unit tests</a><br>
+<a href="index.html">Home</a><br>
 <a id="testingPlan"></a>
 <h1>Testing plan</h1>
 
@@ -65,7 +66,7 @@ Before UAT exploratory and functional testing should be done.</p>
         <td>
             <ol>
                 <li>Visit: https://paschovanez.github.io/co1111-shared-project/index.html</li>
-                <li>Click the start button</li>
+                <li>Click the start new game button</li>
                 <li>Expected result: Under “Choose your game:” Different treasure hunts, which can be selected, must appear.</li>
             </ol>
         </td>
@@ -75,7 +76,7 @@ Before UAT exploratory and functional testing should be done.</p>
     <td>
         <ol>
             <li>Visit: https://paschovanez.github.io/co1111-shared-project/index.html</li>
-            <li>Click the start button</li>
+            <li>Click the start new game button</li>
             <li>Enter your name, number of game and choose the treasure hunt, if the name is already taken try to use another name.</li>
             <li>Click the start button</li>
             <li>Expected result: The first question of the game should appear with an input field related to this question.</li>
@@ -86,7 +87,7 @@ Before UAT exploratory and functional testing should be done.</p>
         <td>
             <ol>
                 <li>Visit: https://paschovanez.github.io/co1111-shared-project/index.html</li>
-                <li>Click the start button</li>
+                <li>Click the start new game button</li>
                 <li>Enter your name, number of game and choose the treasure hunt, if the name is already taken try to use another name.</li>
                 <li>Click the start button.</li>
                 <li>Enter the answer.</li>
@@ -100,7 +101,7 @@ Before UAT exploratory and functional testing should be done.</p>
         <td>
             <ol>
                 <li>Visit: https://paschovanez.github.io/co1111-shared-project/index.html</li>
-                <li>Click the start button</li>
+                <li>Click the start new game button</li>
                 <li>Enter your name, number of game and choose the treasure hunt, if the name is already taken try to use another name.</li>
                 <li>Click the start button.</li>
                 <li>Enter the answer.</li>
@@ -113,7 +114,7 @@ Before UAT exploratory and functional testing should be done.</p>
         <td>
             <ol>
                 <li>Visit: https://paschovanez.github.io/co1111-shared-project/index.html</li>
-                <li>Click the start button</li>
+                <li>Click the start new game button</li>
                 <li>Enter your name, number of game and choose the treasure hunt, if a name is already taken try to use another name.</li>
                 <li>Click the start button.</li>
                 <li>Answer the questions, until you get a location related one.</li>
@@ -131,13 +132,130 @@ Before UAT exploratory and functional testing should be done.</p>
         <td>
             <ol>
                 <li>Visit: https://paschovanez.github.io/co1111-shared-project/index.html</li>
-                <li>Click the start button</li>
+                <li>Click the start new game button</li>
                 <li>Enter your name, number of game and choose the treasure hunt, if name is already taken try to use another name.</li>
                 <li>Click the start button.</li>
                 <li>Answer the questions, until you’ve finished the game.</li>
-                <li>Expected result: First 20 players should be displayed as a table.</li>
+                <li>Expected result: First 10 players should be displayed as a table.</li>
             </ol>
         </td>
+    </tr>
+    <tr><td>7 Resume game:</td>
+        <td>
+            <ol>
+                <li>Visit: https://paschovanez.github.io/co1111-shared-project/index.html</li>
+                <li>Click the start new game button</li>
+                <li>Enter your name, number of game and choose the treasure hunt, if name is already taken try to use another name.</li>
+                <li>Click the start button.</li>
+                <li>Proceed to the 3 question(skip or answer)</li>
+                <li>Return to the index page</li>
+                <li>Click 'Resume previous game'</li>
+                <li>Expected result: Third question should be displayed with the correct score.</li>
+            </ol>
+        </td>
+    </tr>
+    <tr><td>8 QR code scanner:</td>
+        <td>
+            <ol>
+                <li>Visit: https://paschovanez.github.io/co1111-shared-project/index.html</li>
+                <li>Click the start new game button</li>
+                <li>Enter your name, number of game and choose the treasure hunt, if name is already taken try to use another name.</li>
+                <li>Click the start button.</li>
+                <li>Click 'Camera' button</li>
+                <li>If camera is not displayed, click 'Next' button</li>
+                <li>Scan a QR code with a camera</li>
+                <li>Expected result: A Hint should be displayed below the question with a content of a QR code.</li>
+            </ol>
+        </td>
+    </tr>
+    <tr><td>9 Previous questions:</td>
+        <td>
+            <ol>
+                <li>Visit: https://paschovanez.github.io/co1111-shared-project/index.html</li>
+                <li>Click the start new game button</li>
+                <li>Enter your name, number of game and choose the treasure hunt, if name is already taken try to use another name.</li>
+                <li>Click the start button.</li>
+                <li>Answer the questions, until you’ve finished the game.</li>
+                <li>Expected result: Your answers for the game should be under leaderboard.</li>
+            </ol>
+        </td>
+    </tr>
+
+</table>
+<h2>UAT Results</h2>
+<a id="UATresults"></a>
+<table>
+    <tr>
+        <th>Test</th>
+        <th>Tester</th>
+        <th>Result</th>
+        <th>Comment</th>
+    </tr>
+    <tr>
+        <td>1 Getting a list of games</td>
+        <td>Pavel Telnov</td>
+        <td>Passed</td>
+        <td>Passed, 3 games displayed (23.03.2021)</td>
+    </tr>
+    <tr>
+        <td>2 Getting a question</td>
+        <td>Pavel Telnov</td>
+        <td>Passed</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>3 Sending the correct answer:</td>
+        <td>Pavel Telnov</td>
+        <td>Passed</td>
+        <td>On the first question score isn't changing (Sample treasure hunt).</td>
+    </tr>
+    <tr>
+        <td>4 Sending an incorrect answer</td>
+        <td>Pavel Telnov</td>
+        <td>Passed</td>
+        <td>On the first question score isn't changing (Sample treasure hunt).</td>
+    </tr>
+    <tr>
+        <td>5.1 Geolocation</td>
+        <td>Pavel Telnov</td>
+        <td>Passed</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>5.2 Geolocation</td>
+        <td>Pavel Telnov</td>
+        <td>Passed</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>5.3 Geolocation</td>
+        <td>Pavel Telnov</td>
+        <td>Passed</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>6 Leaderboard</td>
+        <td>Pavel Telnov</td>
+        <td>Passed</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>7 Resume game</td>
+        <td>Pavel Telnov</td>
+        <td>Passed</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>8 QR code scanner</td>
+        <td>Pavel Telnov</td>
+        <td>Passed</td>
+        <td>QR code is working on the iPhone, but when 'Next' button is pressed, camera is only reloading, it is not switched to the next one.</td>
+    </tr>
+    <tr>
+        <td>9 Previous questions</td>
+        <td>Pavel Telnov</td>
+        <td>Passed</td>
+        <td></td>
     </tr>
 </table>
 <h2>Exploratory testing</h2>
@@ -169,8 +287,32 @@ Before UAT exploratory and functional testing should be done.</p>
 </table>
 <h2>Unit Testing</h2>
 <a id="UnitTest"></a>
+<h3>Choose the question characteristics</h3>
+<h4>This section will create a question with following parameters. Created to test the design of the page in different situations</h4>
+<label for="question-type">Choose a question type:</label>
+<select id="question-type" name="question-type">
+    <option value="&question-type=BOOLEAN">BOOLEAN</option>
+    <option value="&question-type=MCQ">MCQ</option>
+    <option value="&question-type=INTEGER">INTEGER</option>
+    <option value="&question-type=NUMERIC">NUMERIC</option>
+    <option value="&question-type=TEXT">TEXT</option>
+</select><br>
+<label for="can-be-skipped">Can the question be skipped?</label>
+<select id="can-be-skipped" name="can-be-skipped" >
+    <option value="&can-be-skipped=true">True</option>
+    <option value="&can-be-skipped=false">False</option>
+</select><br>
+<label for="requires-location">Does question requires location?</label>
+<select id="requires-location" name="requires-location" >
+    <option value="&requires-location=true">True</option>
+    <option value="&requires-location=false">False</option>
+</select><br>
+<button onclick="showQuestion()" style="font-size: 2vh; margin-top: 2vh">View the question</button>
+
+
 <h3>Cookie Test</h3>
-<button onclick="testCookies()">Test cookies</button>
+<h4>Will create a cookie with an expected value, after that it will try to get this cookie and compare its value with an expected value.</h4>
+<button onclick="testCookies()" style="font-size: 2vh">Test cookies</button>
 <table id="cookiesTable">
     <tr>
         <th>Expected</th>

@@ -22,7 +22,7 @@
 <div style="text-align: center">
     <button onclick="refreshTable()" class="button">Refresh</button>
 </div>
-<div id="table">
+<div class="table">
     <table align="center" id="resultsTable" class="Shadow">
         <tr>
             <th>Name</th>
@@ -32,6 +32,15 @@
 
     </table>
     <h2 id="loading" >Loading...</h2>
+</div>
+<h1>Your Answers:</h1>
+<div class="table" >
+    <table id="questMap" class="Shadow" style="margin-bottom: 3vh">
+        <tr>
+            <th>Number</th>
+            <th>Answer</th>
+        </tr>
+    </table>
 </div>
 <script src="JavaScript/leaderboard.js">
 
