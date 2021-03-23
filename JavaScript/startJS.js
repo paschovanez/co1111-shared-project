@@ -203,7 +203,8 @@ function getLocation()
 }
 
 
-SetInterval(getLocation, 45000);
+let interval = setInterval(getLocation, 45000);
+
 function sendPos(position) {
 
     fetch("https://codecyprus.org/th/api/location?session=" + getCookie('session') +"&latitude="+position.coords.latitude+  "&longitude=" + position.coords.longitude)
