@@ -282,7 +282,7 @@ function OpenCamera()
             console.error('No cameras found.');
             alert("No cameras found.");
         }
-        messageDir.innerHTML=cameras.length;
+
     }).catch(function (e) {
         console.error(e);
         alert("No cameras found.");
@@ -293,7 +293,7 @@ function NextCamera()
 {
     Instascan.Camera.getCameras().then(function (cameras)
     {
-        if (cameraNumber<cameras.length)
+        if (cameraNumber<cameras.length-1)
         {
             cameraNumber+=1;
         }
