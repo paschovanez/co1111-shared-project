@@ -57,9 +57,17 @@ Pavel will continue working on the main functionality.</p>
   Info button in the game page.   
   Unit testing.   
   
-  # Meeting 8 23.03.2021
+  # Meeting 8 22.03.2021
   Added an info button   
   Added a first unit test   
   Heuristic evaluation soon will be uploaded  
   Changed style of the leaderboard table   
-  Overall style improvements    
+  Overall style improvements
+  
+  # Meeting 9 23.03.2021
+  Added a heuristic evaluation
+  Added a unit test, which allows a tester to create a question with a parameters(can be skipped, requires location etc.) to check how page being displayed is different situations 
+  Added some content to our social networks
+  Added a table, which shows your answers for the quiz
+  Issues:
+  Camera is not switching on iPhone by pressing 'Next' button, it just reloads.
