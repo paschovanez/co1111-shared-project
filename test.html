@@ -8,7 +8,7 @@
 <body>
 <a href="#UATcases">Go to UAT cases</a><br>
 <a href="#">Go to UAT results</a><br>
-<a href="#">Go to Unit tests</a><br>
+<a href="#UnitTest">Go to Unit tests</a><br>
 <a id="testingPlan"></a>
 <h1>Testing plan</h1>
 
@@ -160,6 +160,24 @@ Before UAT exploratory and functional testing should be done.</p>
         <td>Fixed</td>
         <td>Twitter wasn't responsive for the full screen on PC, at some moment it stopped stretching. Fixed by adding the css property for viewport wider than 1600px</td>
     </tr>
+    <tr>
+        <td>'Next' button does not go to the next camera on the phones</td>
+        <td>Pavel Telnov</td>
+        <td>Not fixed</td>
+        <td>Just refreshes the current camera does not go to the next one</td>
+    </tr>
 </table>
+<h2>Unit Testing</h2>
+<a id="UnitTest"></a>
+<h3>Cookie Test</h3>
+<button onclick="testCookies()">Test cookies</button>
+<table id="cookiesTable">
+    <tr>
+        <th>Expected</th>
+        <th>Output</th>
+        <th>Passed</th>
+    </tr>
+</table>
+<script src="JavaScript/test.js"></script>
 </body>
 </html>

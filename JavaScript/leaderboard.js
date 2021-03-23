@@ -24,12 +24,18 @@ function handleLeaderboard(leaderboard) {
         let formattedDate = date.toLocaleDateString("en-UK", options);
         html += "<tr>" +
             "<td>" + "<p>" + entry['player'] + "</p>" + "</td>" +
-            "<td>" + "<p>" + entry['score'] + "</p>" + "</td>" +
+            "<td style='text-align: center'>" + "<p>" + entry['score'] + "</p>" + "</td>" +
             "<td>" + "<p>" + formattedDate + "</p>" + "</td>" +
             "</tr>";
     }
     let leaderboardElement = document.getElementById('resultsTable'); // table
     leaderboardElement.innerHTML += html;// append generated HTML to existing
+    document.getElementById('loading').style.display='none';
+}
+
+function refreshTable()
+{
+    window.location.reload();
 }
 
 function getCookie(cname) {

@@ -7,7 +7,7 @@ const skipWindow = document.getElementById('skipConf');
 const infoWindow = document.getElementById('Info');
 var cameraNumber=0;
 
-function getCookie(cname) {
+function getCookie(cname) {   // code from the https://www.w3schools.com
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
@@ -137,7 +137,7 @@ function answerF()
         });
 }
 
-function setCookie(cookieName, cookieValue, expireDays) {
+function setCookie(cookieName, cookieValue, expireDays) { // code from the https://www.w3schools.com
     let date = new Date();
     date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 1000));
     let expires = "expires=" + date.toUTCString();
@@ -203,7 +203,7 @@ function getLocation()
 }
 
 
-//SetInterval(getLocation, 35000);
+SetInterval(getLocation, 45000);
 function sendPos(position) {
 
     fetch("https://codecyprus.org/th/api/location?session=" + getCookie('session') +"&latitude="+position.coords.latitude+  "&longitude=" + position.coords.longitude)
@@ -291,7 +291,7 @@ function NextCamera()
 {
     Instascan.Camera.getCameras().then(function (cameras)
     {
-        if (cameraNumber<cameras.length-1)
+        if (cameraNumber<cameras.length)
         {
             cameraNumber+=1;
         }
@@ -316,7 +316,7 @@ function StopCamera()
 
 scanner.addListener('scan', function (content) {
     console.log(content);
-    document.getElementById("content").innerHTML = content;
+    document.getElementById("content").innerHTML = "Hint: " + content;
 })
 
 

@@ -1,11 +1,24 @@
+body
+{
+    font-size: 2vh;
+}
+
 table
 {
     border: 0.1vh solid black;
     border-collapse: collapse;
+    margin: 2vh;
+
 }
 td
 {
     border: 0.1vh solid black;
     padding-left: 1vw;
-    font-size: 3vh;
+    font-size: 2vh;
+}
+th
+{
+    border: 0.1vh solid black;
+    padding-left: 1vw;
+    font-size: 2vh;
 }

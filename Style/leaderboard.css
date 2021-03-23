@@ -4,6 +4,7 @@
 
     margin: 0;
     padding: 0;
+    font-family: Merriweather;
 }
 
 
@@ -11,26 +12,57 @@
 
 table
 {
-    border: 0.1em solid black;
+
     padding: 0;
     margin: 0;
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     border-collapse: collapse;
 
 }
 #table
 {
 
+    width: auto;
 
-    width: 100%;
 }
 th, td
 {
-    border: 0.01em solid black;
+    border: 0.3vh solid black;
     width: 0;
-    font-size: 3vh;
-    padding: 0;
+    font-size: 2vh;
+    padding: 1vh 0;
     margin: 0;
+
+}
+th
+{
+    background-color: #fa802e;
+    font-size: 3vh;
+    color: white;
+
+    font-family: "Segoe UI";
+}
+
+.button
+{
+    font-size: 3vh;
+    border-radius: 1vh;
+    background-color: #fc9e47;
+    border: 0.5vh solid #ff7636;
+    margin: 0 0 2vh 0;
+    padding: 1vh;
+    font-family:  'Merriweather', sans-serif ;
+
+}
+
+.Shadow
+{
+    box-shadow: 0 0.5em 1em 0.5em #5b5b5b, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+td
+{
+    padding: 1vh 1vw;
 }
 p
 {
@@ -54,10 +86,14 @@ body
 h1
 {
     text-align: center;
-    font-size: 3em;
+    font-size: 4vh;
     margin: 1em;
 }
-
+h2
+{
+    text-align: center;
+    font-size: 4vh;
+}
 
 
 #currentLoc

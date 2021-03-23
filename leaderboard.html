@@ -19,9 +19,11 @@
 
 
 <h1>Treasure Hunt Leaderboard</h1>
-
+<div style="text-align: center">
+    <button onclick="refreshTable()" class="button">Refresh</button>
+</div>
 <div id="table">
-    <table id="resultsTable" style="width: 100%">
+    <table align="center" id="resultsTable" class="Shadow">
         <tr>
             <th>Name</th>
             <th>Score</th>
@@ -29,6 +31,7 @@
         </tr>
 
     </table>
+    <h2 id="loading" >Loading...</h2>
 </div>
 <script src="JavaScript/leaderboard.js">
 
