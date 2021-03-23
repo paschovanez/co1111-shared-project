@@ -301,8 +301,9 @@ function NextCamera()
         {
            cameraNumber=0;
         }
-        OpenCamera();
+
     })
+    OpenCamera();
 }
 function StopCamera()
 {
